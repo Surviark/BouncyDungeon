@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jumpchk : MonoBehaviour
 {
     public GameObject Player;
+    private bool hasCollided = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,17 @@ public class Jumpchk : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+        if (!hasCollided)
+        {
+            Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+            hasCollided = true;
+            StartCoroutine(DelayedExecution());
+        }
+    }
+
+    private IEnumerator DelayedExecution()
+    {
+        yield return new WaitForSeconds(0.1f);
+        hasCollided = false;
     }
 }

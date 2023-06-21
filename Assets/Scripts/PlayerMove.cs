@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float maxSpeed;
+    public float maxSpeed = 3;
     public float jumpPower;
     Rigidbody2D rigid;
     SpriteRenderer spriterender;

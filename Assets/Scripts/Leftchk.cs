@@ -6,6 +6,7 @@ public class Leftchk : MonoBehaviour
 {
     //공 왼쪽이 벽에 닿았을 경우 True
     public bool isleft = false;
+    private bool hasCollided = false;
     public GameObject Player;
     public Rigidbody2D rigid;
     // Start is called before the first frame update
@@ -23,10 +24,18 @@ public class Leftchk : MonoBehaviour
     {
         isleft = true;
         Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, rigid.velocity.y);
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && !hasCollided)
         {
             rigid.AddForce(Vector2.right * 3, ForceMode2D.Impulse);
             rigid.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+            hasCollided = true;
+            StartCoroutine(DelayedExecution());
         }
+    }
+
+    private IEnumerator DelayedExecution()
+    {
+        yield return new WaitForSeconds(0.1f);
+        hasCollided = false;
     }
 }
