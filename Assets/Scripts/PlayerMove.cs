@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (rigid.velocity.x < 0)
             spriterender.flipX = true;
-        else
+        if (rigid.velocity.x > 0)
             spriterender.flipX = false;
     }
 
