@@ -46,9 +46,24 @@ public class Weapon : MonoBehaviour
     {
         for (int index = 0; index < count; index++)
         {
-            Transform Knife = GameManager.instance.poolManager.Get(prefabId).transform;
-            Knife.parent = transform;
-            Knife.GetComponent<Knife>().Init(damage, -1);
+            Transform knife;
+            
+            if(index < transform.childCount)
+            {
+                knife = transform.GetChild(index);
+            }
+            else
+            {
+                knife = GameManager.instance.poolManager.Get(prefabId).transform;
+                knife.parent = transform;
+            }
+            knife.localPosition = Vector3.zero;
+            knife.localRotation = Quaternion.identity;
+
+            Vector3 rotvec = Vector3.forward * 360 * index / count;
+            knife.Rotate(rotvec);
+            knife.Translate(knife.up * 1.5f, Space.World);
+            knife.GetComponent<Knife>().Init(damage, -1);
         }
     }
 }

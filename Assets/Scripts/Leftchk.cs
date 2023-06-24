@@ -22,15 +22,18 @@ public class Leftchk : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        isleft = true;
-        Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, rigid.velocity.y);
-        if (Input.GetKey(KeyCode.RightArrow) && !hasCollided)
-        {
-            rigid.AddForce(Vector2.right * 3, ForceMode2D.Impulse);
-            rigid.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
-            hasCollided = true;
-            StartCoroutine(DelayedExecution());
+        if (collision.gameObject.CompareTag("Platform")) {
+            isleft = true;
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, rigid.velocity.y);
+            if (Input.GetKey(KeyCode.RightArrow) && !hasCollided)
+            {
+                rigid.AddForce(Vector2.right * 3, ForceMode2D.Impulse);
+                rigid.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+                hasCollided = true;
+                StartCoroutine(DelayedExecution());
+            }
         }
+        
     }
 
     private IEnumerator DelayedExecution()

@@ -20,7 +20,7 @@ public class Jumpchk : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!hasCollided)
+        if (!hasCollided && collision.collider.gameObject.CompareTag("Platform"))
         {
             Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 6, ForceMode2D.Impulse);
             hasCollided = true;
