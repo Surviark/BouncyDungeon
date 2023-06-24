@@ -24,6 +24,7 @@ public class Rightchk : MonoBehaviour
     {
         isright = true;
         Player.GetComponent<Rigidbody2D>().velocity = new Vector2 (0,rigid.velocity.y);
+
         if (Input.GetKey(KeyCode.LeftArrow) && !hasCollided)
         {
             rigid.AddForce(Vector2.left * 3, ForceMode2D.Impulse);
