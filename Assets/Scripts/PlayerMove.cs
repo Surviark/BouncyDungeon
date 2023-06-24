@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float maxSpeed = 3;
     public float jumpPower;
+    public static bool leftBlock;
     Rigidbody2D rigid;
     SpriteRenderer spriterender;
     // Start is called before the first frame update
@@ -30,8 +31,12 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal");
-
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        
+        if (!GameManager.instance.leftBlock && !GameManager.instance.rightBlock)
+        {
+            rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        }
+        
 
         if (rigid.velocity.x > maxSpeed)
             rigid.velocity=new Vector2(maxSpeed,rigid.velocity.y);

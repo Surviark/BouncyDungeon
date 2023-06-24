@@ -25,15 +25,16 @@ public class Rightchk : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isright = true;
+            GameManager.instance.rightBlock = true;
             Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, rigid.velocity.y);
 
             if (Input.GetKey(KeyCode.LeftArrow) && !hasCollided)
             {
-                rigid.AddForce(Vector2.left * 3, ForceMode2D.Impulse);
                 rigid.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
-                hasCollided = true;
-                StartCoroutine(DelayedExecution());
             }
+            rigid.AddForce(Vector2.left * 3, ForceMode2D.Impulse);
+            hasCollided = true;
+            StartCoroutine(DelayedExecution());
         }
        
 
@@ -41,6 +42,7 @@ public class Rightchk : MonoBehaviour
     private IEnumerator DelayedExecution()
     {
         yield return new WaitForSeconds(0.1f);
+        GameManager.instance.rightBlock = false;
         hasCollided = false;
     }
 }

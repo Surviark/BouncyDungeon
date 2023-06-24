@@ -24,11 +24,18 @@ public class Leftchk : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Platform")) {
             isleft = true;
+            GameManager.instance.leftBlock = true;
             Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, rigid.velocity.y);
             if (Input.GetKey(KeyCode.RightArrow) && !hasCollided)
             {
                 rigid.AddForce(Vector2.right * 3, ForceMode2D.Impulse);
                 rigid.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+                hasCollided = true;
+                StartCoroutine(DelayedExecution());
+            }
+            else
+            {
+                rigid.AddForce(Vector2.right * 2, ForceMode2D.Impulse);
                 hasCollided = true;
                 StartCoroutine(DelayedExecution());
             }
@@ -39,6 +46,7 @@ public class Leftchk : MonoBehaviour
     private IEnumerator DelayedExecution()
     {
         yield return new WaitForSeconds(0.1f);
+        GameManager.instance.leftBlock = false;
         hasCollided = false;
     }
 }
