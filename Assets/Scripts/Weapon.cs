@@ -29,6 +29,24 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    public void cntup(int count)
+    {
+        this.count += count;
+        if (id == 0)
+        {
+            Batch();
+        }
+    }
+
+    public void dmgup(float damage)
+    {
+        this.damage += damage;
+        if (id == 0)
+        {
+            Batch();
+        }
+    }
+
     public void Init()
     {
        switch (id)

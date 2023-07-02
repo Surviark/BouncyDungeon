@@ -22,7 +22,7 @@ public class Jumpchk : MonoBehaviour
     {
         if (!hasCollided && collision.collider.gameObject.CompareTag("Platform"))
         {
-            Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 6, ForceMode2D.Impulse);
+            Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 7, ForceMode2D.Impulse);
             hasCollided = true;
             StartCoroutine(DelayedExecution());
         }

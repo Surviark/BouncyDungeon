@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Knife
   - Platform
+  - KnifeCnt+1
+  - damage
   layers:
   - Default
   - TransparentFX

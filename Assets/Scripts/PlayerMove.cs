@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public float health = 100;
     public float maxSpeed = 3;
     public float jumpPower;
     public static bool leftBlock;
     Rigidbody2D rigid;
     SpriteRenderer spriterender;
+    CapsuleCollider2D capsule;
     // Start is called before the first frame update
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriterender = GetComponent<SpriteRenderer>();
+        capsule = GetComponent<CapsuleCollider2D>();
     }
 
     private void Update()
@@ -26,6 +29,10 @@ public class PlayerMove : MonoBehaviour
             spriterender.flipX = true;
         if (rigid.velocity.x > 0)
             spriterender.flipX = false;
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
