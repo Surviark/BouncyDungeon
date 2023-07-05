@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
+    public Player player;
     public float health = 100;
     public float maxSpeed = 3;
     public float jumpPower;
@@ -52,4 +54,23 @@ public class PlayerMove : MonoBehaviour
             rigid.velocity=new Vector2(maxSpeed*(-1),rigid.velocity.y);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("플레이어가 맞음");
+            GameObject.Find("Player").GetComponent<Player>().TakeDamage(20);
+        }
+
+        if (collision.gameObject.tag == "DeadBox")
+        {
+            Debug.Log("플레이어가 사망");
+            GameObject.Find("Player").GetComponent<Player>().TakeDamage(100);
+        }
+
+
+    }
+
+
 }

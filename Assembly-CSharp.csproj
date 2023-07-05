@@ -55,9 +55,11 @@
      <Compile Include="Assets\BtnType.cs" />
      <Compile Include="Assets\SceneLoad.cs" />
      <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
+     <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Itemchk.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\Leftchk.cs" />
      <Compile Include="Assets\SceneLoader.cs" />

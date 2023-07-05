@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - KnifeCnt+1
   - damage
+  - Enemy
+  - DeadBox
   layers:
   - Default
   - TransparentFX
