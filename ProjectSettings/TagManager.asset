@@ -8,8 +8,8 @@ TagManager:
   - Platform
   - KnifeCnt+1
   - damage
-  - Enemy
-  - DeadBox
+  - SpearCnt+1
+  - Spear
   layers:
   - Default
   - TransparentFX

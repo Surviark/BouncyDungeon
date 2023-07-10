@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
     public int count;
     public float speed;
     public GameObject prefab;
+    bool skillonchk = false;
+    public bool hasweapon = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,21 @@ public class Weapon : MonoBehaviour
             default:
                 break;
         }
+        if (Input.GetKeyDown(KeyCode.Space) && skillonchk == false)
+        {
+            Skillon();
+        }
+    }
+    void Skillon()
+    {
+        skillonchk = true;
+        speed = 500;
+        Invoke("Skilloff", 3);
+    }
+    void Skilloff()
+    {
+        speed = 150;
+        skillonchk = false;
     }
 
     public void cntup(int count)
@@ -49,7 +66,7 @@ public class Weapon : MonoBehaviour
 
     public void Init()
     {
-       switch (id)
+        switch (id)
         {
             case 0:
                 speed = 150;
@@ -65,8 +82,8 @@ public class Weapon : MonoBehaviour
         for (int index = 0; index < count; index++)
         {
             Transform knife;
-            
-            if(index < transform.childCount)
+
+            if (index < transform.childCount)
             {
                 knife = transform.GetChild(index);
             }
