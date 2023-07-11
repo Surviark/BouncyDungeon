@@ -11,6 +11,8 @@ TagManager:
   - SpearCnt+1
   - Spear
   - weapon
+  - DeadBox
+  - Enemy
   layers:
   - Default
   - TransparentFX
