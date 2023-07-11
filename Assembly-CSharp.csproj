@@ -64,6 +64,7 @@
     <Compile Include="Assets\BtnType.cs" />
     <Compile Include="Assets\SceneLoad.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
+    <Compile Include="Assets\Scripts\Weapon1.cs" />
     <Compile Include="Assets\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Itemchk.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="Assets\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Knife.cs" />
     <Compile Include="Assets\Scripts\KnifeCntinc.cs" />
-    <Compile Include="Assets\Scripts\Weapon1.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

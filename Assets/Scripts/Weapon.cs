@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
     void Skillon()
     {
         skillonchk = true;
-        speed = 500;
+        speed = 700;
         Invoke("Skilloff", 3);
     }
     void Skilloff()

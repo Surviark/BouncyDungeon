@@ -10,6 +10,7 @@ TagManager:
   - damage
   - SpearCnt+1
   - Spear
+  - weapon
   layers:
   - Default
   - TransparentFX

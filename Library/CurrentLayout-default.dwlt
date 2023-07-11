@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 663}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -148,7 +148,7 @@ MonoBehaviour:
     y: 0
     width: 2048
     height: 1196.8
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 663}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 613}
   m_MaxSize: {x: 14002, y: 18063}
   vertical: 0
-  controlID: 102
+  controlID: 172
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -443,9 +443,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.3786516, y: 4.431975, z: 4447.643}
+    m_Target: {x: 8.64266, y: 5.0555553, z: 9199.047}
     speed: 2
-    m_Value: {x: -4.3786516, y: 4.431975, z: 4447.643}
+    m_Value: {x: 8.64266, y: 5.0555553, z: 9199.047}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -496,9 +496,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.49314
+    m_Target: 21.832903
     speed: 2
-    m_Value: 10.49314
+    m_Value: 21.832903
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -553,21 +553,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 62fbfffff4ffffff2a4300003e43000086430000a6430000
+      m_ExpandedIDs: 72afffffbeafffff62fbffff2a4300003e4300006243000086430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: ItemChk
+        m_OriginalName: ItemChk
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 17240
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 12}
       m_SearchString: 
@@ -646,7 +646,7 @@ MonoBehaviour:
       y: 21
       width: 1086
       height: 503.59998
-    m_Scale: {x: 0.99999994, y: 0.99999994}
+    m_Scale: {x: 0.9999999, y: 0.99999994}
     m_Translation: {x: 543, y: 251.79999}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -857,7 +857,7 @@ MonoBehaviour:
     m_CachedPref: 108.20007
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 1399456817023787441, guid: bd1d3a307d09cb440a7361eecc9c3d8c, type: 3}
+  m_Palette: {fileID: 3362583208683354789, guid: b8122d3d05d0d1946a249e5a7bd1fbe1, type: 3}
   m_DrawGizmos: 0
 --- !u!114 &23
 MonoBehaviour:
